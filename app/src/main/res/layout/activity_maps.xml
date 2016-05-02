@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapsActivity">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/header_background"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/app_name1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nagita"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/app_name2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/app_name1"
+            android:text="pan*"
+            android:textAllCaps="true"
+            android:textColor="@color/sky"
+            android:textSize="26sp" />
+    </RelativeLayout>
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footer"
+        android:layout_below="@+id/header" />
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/footer_background">
+
+        <RelativeLayout
+            android:id="@+id/descLayout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/desc_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="Wake Me Up "
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:typeface="sans" />
+
+            <RadioGroup
+                android:id="@+id/distance_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/desc_txt"
+                android:checkedButton="@+id/sound"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:buttonTint="@color/white"
+                    android:text="1"
+                    android:textColor="@color/white"
+                    android:typeface="sans" />
+
+                <RadioButton
+                    android:id="@+id/two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:buttonTint="@color/white"
+                    android:text="2"
+                    android:textColor="@color/white"
+                    android:typeface="sans" />
+
+                <RadioButton
+                    android:id="@+id/three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:buttonTint="@color/white"
+                    android:text="3"
+                    android:textColor="@color/white"
+                    android:typeface="sans" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/desc_txt2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/distance_radio"
+                android:gravity="center_vertical"
+                android:text="  kms Before."
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:typeface="sans" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_set_alarm"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/button_selected"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="Set Alarm"
+            android:clickable="true"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:typeface="sans" />
+    </RelativeLayout>
+
+</RelativeLayout>
